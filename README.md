@@ -20,6 +20,7 @@ Gazelle is a Bazel build file generator for Bazel projects
 
 ## *Associate go.mod with bazel*
 > gazelle update-repos --from_file=go.mod -to_macro=go_third_party.bzl%go_deps
+A go_third_party.bzl will be generated to have "bazel-ish" representation of go.mod
 That way, bazel will be aware of dependencies mentioned in go.mod
 
 ## *To build mainapp service in this repo*
@@ -28,6 +29,8 @@ That way, bazel will be aware of dependencies mentioned in go.mod
 ## *To run mainapp service in this repo*
 > bazel run //packages/mainapp
 
+## *To generate dependency graph*
+> bazel query 'allpaths(packages/...,//packages/shared/handlers/health:health)' --output graph | dot -Tpng > dep.png
 
 
 # TO-DO: Building docker images with bazel

@@ -1,2 +1,5 @@
 go.sum
 dep.png
+
+# Ignore all bazel-* symlinks.
+/bazel-*
