@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"monogrepo/packages/mainapp/router"
+	"monorepo/packages/mainapp/router"
 )
 
 func main() {

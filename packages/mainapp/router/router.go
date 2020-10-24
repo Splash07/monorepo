@@ -1,7 +1,7 @@
 package router
 
 import (
-	"monogrepo/packages/shared/handlers/health"
+	"monorepo/packages/shared/handlers/health"
 
 	"github.com/gin-gonic/gin"
 )
