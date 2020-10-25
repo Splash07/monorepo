@@ -20,8 +20,11 @@ Gazelle is a Bazel build file generator for Bazel projects
 
 ## *Associate go.mod with bazel*
 > gazelle update-repos --from_file=go.mod -to_macro=go_third_party.bzl%go_deps
-A go_third_party.bzl will be generated to have "bazel-ish" representation of go.mod
-That way, bazel will be aware of dependencies mentioned in go.mod
+
+A go_third_party.bzl will be generated to have "bazel-ish" representation of go.mod. That way, bazel will be aware of dependencies mentioned in go.mod
+
+## *Bazel build all*
+> bazel build //...
 
 ## *To build mainapp service in this repo*
 > bazel build //packages/mainapp
